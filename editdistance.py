@@ -16,11 +16,15 @@ def getEditDistance(word1, word2):
               topLeft = matrixTable[i-1][j-1] + 1
           matrixTable[i][j] = min(top, left, topLeft)
 
-  print matrixTable
+  #print matrixTable
 
   return matrixTable[len(word1)][len(word2)]
 
 
 if __name__ == "__main__":
+    if (len(sys.argv) < 3):
+        print "usage: python editdistance.py word1 word2"
+        exit()
+
     editDistance = getEditDistance(sys.argv[1], sys.argv[2])
     print editDistance 
