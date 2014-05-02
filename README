@@ -1,0 +1,4 @@
+get edit distance between two wrods using Levenshtein distance
+
+Usage:
+ptyhon editdistance word1 and word2
